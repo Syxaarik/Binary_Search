@@ -26,13 +26,15 @@ def quick_sort(arr):
         return arr
     else:
         pivot = arr[0]
+        print(f'опорный элемент {pivot}')
         less = [i for i in arr[1:] if i <= pivot]
-
+        print(f'элементы меньше опорного {less}')
         greater = [i for i in arr[1:] if i > pivot]
+        print(f'элементы больше опорного {greater}')
         return quick_sort(less) + [pivot] + quick_sort(greater)
 
 
 print(suma([1, 2, 3, 4, 5]))
 print(count([1, 2, 3, 4, 5]))
 print(max([1, 2, 3, 4, 5]))
-print(quick_sort([5, 2, 4, 3, 1]))
+print(quick_sort([40, 30, 10, 20, 50]))
